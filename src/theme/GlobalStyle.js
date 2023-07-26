@@ -1,4 +1,6 @@
-import { theme } from './theme'
+import { Open_Sans } from 'next/font/google'
+
+const openSans = Open_Sans({ subsets: ['latin'] })
 
 export default function GlobalStyle() {
   return (
@@ -12,7 +14,7 @@ export default function GlobalStyle() {
           text-decoration: none;
         }
         body {
-          font-family: ${theme.typography.fontFamily}, sans-serif;
+          font-family: ${openSans.style.fontFamily};
         }
         img, video {
           max-width: 100%;
